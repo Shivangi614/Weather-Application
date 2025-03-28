@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 
-const API_KEY = 'df4ee14e5142af4c9ed3f6f3530c9642';
+const API_KEY = import.meta.env.VITE_API_KEY;
+
 function Weather() {
   const [city, setCity] = useState('');
   const [country, setCountry] = useState('');
