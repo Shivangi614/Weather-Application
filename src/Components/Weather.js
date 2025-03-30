@@ -3,7 +3,10 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 
-const API_KEY = import.meta.env.VITE_API_KEY;
+
+const API_KEY = process.env.REACT_APP_API_KEY;
+
+
 
 function Weather() {
   const [city, setCity] = useState('');
@@ -54,7 +57,7 @@ function Weather() {
 
   return (
     <div className={`weather-app ${weatherClass}`}>
-      <h1>Weather App</h1>
+      <h1>Weather Tracker</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
